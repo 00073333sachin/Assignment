@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Elegant handcrafted goods for your home. Discover unique artisan products.">
+  <title>Artisan Goods - Handcrafted Products</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background-color: #faf9f7;
+      color: #2d2926;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    .header {
+      background-color: #fff;
+      border-bottom: 1px solid #e8e4df;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2d2926;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav a {
+      color: #5c5652;
+      text-decoration: none;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #2d2926;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #f5f3f0 0%, #e8e4df 100%);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: normal;
+      margin-bottom: 20px;
+      letter-spacing: 3px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #5c5652;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #2d2926;
+      color: #fff;
+      padding: 15px 40px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #1a1716;
+    }
+
+    /* Products Section */
+    .products-section {
+      padding: 80px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: normal;
+      margin-bottom: 50px;
+      letter-spacing: 2px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border: 1px solid #e8e4df;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      background-color: #f0ebe6;
+    }
+
+    .product-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-name {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: normal;
+    }
+
+    .product-price {
+      font-size: 16px;
+      color: #5c5652;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #2d2926;
+      color: #fff;
+      padding: 60px 20px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+    }
+
+    .footer-section h3 {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    .footer-section a {
+      display: block;
+      color: #a8a29e;
+      text-decoration: none;
+      margin-bottom: 10px;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: #fff;
+    }
+
+    .footer-section p {
+      color: #a8a29e;
+      font-size: 14px;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #3d3936;
+      text-align: center;
+      color: #a8a29e;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">ARTISAN</a>
+        <nav class="nav">
+          <a href="#">Shop</a>
+          <a href="#">Collections</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Handcrafted Goods</h1>
+    <p>Discover unique artisan products made with care and attention to detail. Each piece tells a story.</p>
+    <a href="#" class="btn">Shop Now</a>
+  </section>
+
+  <section class="products-section">
+    <h2 class="section-title">Featured Products</h2>
+    <div class="product-grid">
+      
+      <article class="product-card">
+        <div class="product-image" style="background: linear-gradient(45deg, #d4c4b0, #e8ddd0);"></div>
+        <div class="product-info">
+          <h3 class="product-name">Ceramic Vase</h3>
+          <p class="product-price">$85.00</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image" style="background: linear-gradient(45deg, #c4b8a8, #d8cfc0);"></div>
+        <div class="product-info">
+          <h3 class="product-name">Woven Basket</h3>
+          <p class="product-price">$45.00</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image" style="background: linear-gradient(45deg, #b8a898, #ccc0b0);"></div>
+        <div class="product-info">
+          <h3 class="product-name">Linen Throw</h3>
+          <p class="product-price">$120.00</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image" style="background: linear-gradient(45deg, #a89888, #c0b4a4);"></div>
+        <div class="product-info">
+          <h3 class="product-name">Wooden Bowl</h3>
+          <p class="product-price">$65.00</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Shop</h3>
+        <a href="#">All Products</a>
+        <a href="#">New Arrivals</a>
+        <a href="#">Best Sellers</a>
+        <a href="#">Sale</a>
+      </div>
+      <div class="footer-section">
+        <h3>About</h3>
+        <a href="#">Our Story</a>
+        <a href="#">Artisans</a>
+        <a href="#">Sustainability</a>
+      </div>
+      <div class="footer-section">
+        <h3>Help</h3>
+        <a href="#">Contact Us</a>
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>hello@artisan.com</p>
+        <p>+1 (555) 123-4567</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Artisan Goods. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
